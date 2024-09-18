@@ -1,0 +1,6 @@
+meno = ("Jozef")
+postupnosť = (123456789)
+print(postupnosť)
+print(postupnosť, meno)
+priezvisko = (Tarfa)
+print(meno, priezvisko)
