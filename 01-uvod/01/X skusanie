@@ -1,0 +1,6 @@
+a = int(input("zadaj číslo:"))
+b = int(input("zadaj číslo:"))
+if a < b:
+    print("Menšie je ČÍSLO:", a)
+else:
+    print("Menšie je číslo:", b)
