@@ -1,0 +1,5 @@
+a = int(input ("Zadaj veľkosť strany kocky: "))
+SU = a * 2**(1/2)
+TU = a * 3**(1/2)
+print("stenová uhlopriečka je:", SU)
+print("telesová uhlopriečka je:", TU)
