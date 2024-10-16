@@ -1,3 +1,2 @@
-n = (input("zadaj text: "))
-for i in range (10):
-    print(n)
+txt = input("zadaj text: ")
+print(f"{txt}\n" * 10 )
