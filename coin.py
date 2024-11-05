@@ -1,7 +1,7 @@
 import random
 
 # Simulate 200 fair coin flips
-flip_results = [random.choice(["Heads", "Tails"]) for _ in range(10000000)]
+flip_results = [random.choice(["Heads", "Tails"]) for _ in range(1000)]
 
 # Count the occurrences of heads and tails
 heads_count = flip_results.count("Heads")
