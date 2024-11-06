@@ -3,3 +3,4 @@ https://python.input.sk/
 2.Naštudovať prezentáciu Algoritmus.pptx (po snímku 18)
 
 Dú 7 úloh zo stránky, stranky cyklus az po moduly
+python.input.sk cvicenia du, spytat sa
