@@ -4,5 +4,5 @@
 # ak bude n rovné 5, tak i bude postupne 0,1,2,3,4
 
 n = 5
-for i in range(n):  
-      print(i+1, "Ahoj Svet!",)
+for i in range(n):
+    print("ahoj svet")
