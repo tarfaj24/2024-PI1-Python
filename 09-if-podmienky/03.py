@@ -14,9 +14,9 @@ for i in range(100):
     y = random.randint(3,vyskaplatna - 3)
 
      
-    if (x > sirkaplatna / 4) and (x < sirkaplatna * (3/4)):
+    if (x > sirkaplatna / 4) and (y > sirkaplatna):
          farba = "black"
-    elif (y > sirkaplatna / 4) and (y < sirkaplatna * (3/4)):
+    elif (x < sirkaplatna -  sirkaplatna - (1/4) * sirkaplatna) and (y < vyskaplatna - (1/4) * vyskaplatna):
          farba = "black"
         
     if x > sirkaplatna / 2:
