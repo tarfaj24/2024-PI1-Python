@@ -1,0 +1,9 @@
+canvas = tkinter.Canvas(background="navy")
+width = 0 velkost outlinu
+outline = "yellow" farba outlinu bude zlta
+farba1 = f"#{random.randrange(256**3):06x}"
+for pismeno in text
+def nemecko(x,y):
+canvas.create_polygon trojuholniky,stvoruholniky...
+farba = f"#{r:02x}00{b:02x}"
+canvas.create_oval(x-r,y-r,x+r,y+r) plati aj pre stvorec
