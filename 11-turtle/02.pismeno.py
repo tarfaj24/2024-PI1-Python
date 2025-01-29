@@ -53,7 +53,7 @@ def pismenoj():
 
 def posun():
     t.pu()
-    t.setpos(random.randint(-100,100), random.randint(-100,100))
+    t.setpos(random.randint(-300,300), random.randint(-300,300))
     t.seth(random.randint(0,359))
     t.pd()
 
