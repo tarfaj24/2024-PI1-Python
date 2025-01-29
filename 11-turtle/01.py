@@ -7,7 +7,6 @@ t.heading()
 
 def stvorec(dlzka):
     turtle.delay(10)
-    t.pencolor(farbastvorca)
     t.pensize(10)
     for i in range(4):
         t.fd(dlzka)
@@ -23,7 +22,6 @@ def posun():
 
 def trojuholnik(dlzkat):
     for i in range(3):
-        t.pencolor(farbatrojuholnika)
         t.forward(dlzkat)
         t.rt(120)
 def dom():
@@ -40,12 +38,25 @@ def stvorecfill():
     stvorec(100)
     t.end_fill()
 
+def trojuholnikfill():
+    t.pd
+    t.pensize(5)
+    t.fillcolor("blue")
+    t.begin_fill()
+    t.lt(60)
+    trojuholnik(100)
+    t.end_fill()
+    
+
 def pohybdomu():
     for i in range(10):
+        dom()
         posun()
-        farba = f"#"
+        farba = "red"
 
 
+
+dom()
 
 
 turtle.mainloop()
