@@ -81,7 +81,7 @@ def dom():
 
 
 def domy():
-    for i in range(pocetdomov):
+    for i in range(pocetdomovriadku):
             dom()
             posun()
 
@@ -95,7 +95,7 @@ def dedina():
         domy()
         t.pu()
         t.rt(180)
-        t.fd(2.25* (pocetdomov * dlzkadomu))
+        t.fd(2.25* (pocetdomovriadku * dlzkadomu))
         t.lt(90)
         t.fd(2 *dlzkadomu)
         t.lt(90)

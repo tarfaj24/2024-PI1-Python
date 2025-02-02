@@ -1,0 +1,2 @@
+t.clear
+t = turtle.Turtle()
