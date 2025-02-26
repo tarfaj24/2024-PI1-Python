@@ -13,6 +13,17 @@ t11= turtle.Turtle()
 
 tbg = turtle.Turtle()
 
+t5.hideturtle()
+t4.hideturtle()
+t3.hideturtle()
+t2.hideturtle()
+t6.hideturtle()
+t1.hideturtle()
+t7.hideturtle()
+t8.hideturtle()
+t9.hideturtle()
+t10.hideturtle()
+t11.hideturtle()
 
 
 def background(t):
