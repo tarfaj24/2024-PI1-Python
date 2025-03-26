@@ -31,4 +31,4 @@ def ulica(x, y, dlzka, pocet):
 
 ulica(x, y, dlzka, 5)
 
-canvas.mainloop(
+canvas.mainloop()

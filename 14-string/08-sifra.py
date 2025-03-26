@@ -8,6 +8,7 @@ canvas.pack(side = "left")
 
 
 def sifra():
+    canvas.delete("all")
     strvstup = vstup.get()
     sifrslovo = ""
     sifcislo = 0
@@ -18,6 +19,7 @@ def sifra():
     canvas.create_text(300,200,text = sifrslovo,font= "arial 50")
 
 def odsifrovanie():
+    canvas.delete("all")
     strvstup = vstup.get()
     odsifcislo = 0
     odsifrslovo = ""
