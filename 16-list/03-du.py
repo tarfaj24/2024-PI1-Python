@@ -1,0 +1,1 @@
+#du vypis najnizsiu teplotu v mesiaci a najvyssiu bez pouzitia min a max
