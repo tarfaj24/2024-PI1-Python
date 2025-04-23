@@ -1,1 +1,1 @@
-#oval alebo kruh,farba,x,y
+#oval alebo kruh,farba,x,y + test z textovych suborov a polí
