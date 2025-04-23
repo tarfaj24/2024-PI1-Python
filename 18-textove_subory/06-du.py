@@ -1,0 +1,1 @@
+#oval alebo kruh,farba,x,y
