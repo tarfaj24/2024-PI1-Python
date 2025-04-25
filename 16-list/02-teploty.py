@@ -16,7 +16,7 @@ for i in range(pocet_dni):
 sucet = 0
 for i in range(pocet_dni):
     sucet+= teploty[i]
-    priemhodnota = sucet / pocet_dni
+priemhodnota = sucet / pocet_dni
     
 print(f"Priemerná teplota v mesiaci je {priemhodnota}°C")
 
