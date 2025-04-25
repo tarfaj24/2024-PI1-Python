@@ -1,0 +1,44 @@
+import tkinter
+
+canvas = tkinter.Canvas(width= 400, height=400)
+canvas.pack()
+
+subor = open("body2.txt","r")
+
+listsuboru = []
+
+for riadok in subor:
+    riadok = riadok.strip()
+    listsuboru.append(riadok)
+
+body, farby, geoutvar = [],[],[]
+
+for i in range(0, len(listsuboru),3):
+        geoutvar.append(listsuboru[i])
+    
+for i in range(1, len(listsuboru),3):
+        farby.append(listsuboru[i])
+for i in range(2, len(listsuboru),3):
+        body.append(listsuboru[i])
+    
+
+for i in range(0,len(geoutvar)):
+    if geoutvar[i] == "o":
+        farba1 = str(farby[i])
+        print(farba1)
+        bodyoval = body[i]
+        medzera = bodyoval.find(" ")
+        x1 = int(bodyoval[:medzera])
+        y1 = int(bodyoval[medzera+1:])
+        canvas.create_oval(x1-5,y1-5,x1+5,y1+5,fill=farba1)
+
+    if geoutvar[i] == "r":
+        farba2 = str(farby[i])
+        print(farba2)
+        bodyrec = body[i]
+        medzera = bodyrec.find(" ")
+        x2 = int(bodyrec[:medzera])
+        y2 = int(bodyrec[medzera+1:])
+        canvas.create_rectangle(x2-5,y2-5,x2+5,y2+5,fill=farba2)
+
+tkinter.mainloop()
