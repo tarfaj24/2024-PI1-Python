@@ -14,5 +14,5 @@ r
 purple
 300 300
 o
-pink
+orange
 300 100
