@@ -3,12 +3,14 @@ import random
 
 spustene = True
 
+argument_uhol1 =random.randint(0,360)
+
+
 input = input("vypis mena")
 inputsplitnuty = input.split()
 
 dlzkainputu = len(inputsplitnuty)
 
-uhol =random.randint(0,360)
 rychlost_kolesa = 16
 
 spomalovacia_premenna1 = 13.0
@@ -32,8 +34,8 @@ def tick(sekunda):
 #     uhol -=30
 #     print(uhol)
 
-def koleso():
-    global uhol
+def koleso(uhol):
+    
     global zvacsovanie
     global dlzkainputu
     global rychlost_kolesa
@@ -45,7 +47,7 @@ def koleso():
 
     if spustene == True:
         _delete_()
-        platno.after(rychlost_kolesa,koleso)
+        platno.after(rychlost_kolesa,lambda: koleso(uhol))
         zvacsovanie=0
         for i in range(dlzkainputu):
             platno.create_arc(100,100,300,300,start = 20 + zvacsovanie + uhol,extent = 360/dlzkainputu)
@@ -81,7 +83,7 @@ platno = tk.Canvas(okno,height = 400,width = 400)
 platno.pack()
 
 
-koleso()
+koleso(argument_uhol1)
 
 
 
