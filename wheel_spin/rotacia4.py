@@ -4,14 +4,11 @@ import random
 import math
 argument_uhol1 =random.randint(0,360)
 
-list_s_moznostami = ['marek', 'fero', 'jano',"samo","smaco","janoslav","fesda","adsaddsadasdasdsd"]
-argument_dlzka_inputu = len(list_s_moznostami)
-
 def vypocet_polohy_podla_uhlu(uhol):
-    stred_x = 200
-    stred_y = 200
+    stred_x = 180
+    stred_y = 180
     polomer = 200
-    r = 0.7
+    r = 0.6
     uhol_rad = math.radians(uhol)
     x = stred_x + math.cos(uhol_rad) * polomer * r
     y = stred_y + math.sin(uhol_rad) * polomer * r
