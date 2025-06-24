@@ -1,4 +1,5 @@
 import random, tkinter
+#aa
 subor = open("subor_vykreslovanie","w")
 canvas = tkinter.Canvas(height = 800, width = 800)
 canvas.pack()
