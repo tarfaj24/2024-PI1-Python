@@ -3,7 +3,7 @@ import tkinter as tk
 import random
 import math
 
-
+premenna_otacanie_hlavna_image_argument = 0
 argument_uhol1 =random.randint(0,360)
 
 argument_spustene = True
@@ -58,8 +58,6 @@ def create_hlavna_image(uhol,uhol1,dlzka_inputu,x,y):
     
     # Create base canvas (master image)
     hlavna_img = Image.new("RGBA", (400, 400), (255, 255, 255, 200))  # semi-transparent white
-    uhol = 0
-    uhol1 = 0
     
     for i in range(dlzka_inputu):
         x,y = vypocet_polohy_podla_uhlu(uhol)
@@ -67,10 +65,10 @@ def create_hlavna_image(uhol,uhol1,dlzka_inputu,x,y):
         img1 = make_label_image(inputsplitnuty[i],font_size=20,color="black",uhol_otocenia=uhol1)
         hlavna_img.paste(img1,(x,y),img1)
         uhol-=360/len(inputsplitnuty)
-        uhol1= 200-uhol-20
-        print(uhol)
-        rotated = hlavna_img.rotate(uhol, expand=True)
-    return rotated
+        uhol1 = uhol + 90
+    return hlavna_img
+    
+
 
 def _delete_():
     platno.delete("all")
@@ -78,22 +76,18 @@ def _delete_():
 def tick(sekunda):
     sekunda+=1
 
-def koleso(uhol,zvacsovanie,dlzkainputu,spomalovacia_premenna1,spomalovacia_premenna,spustene,pocet_vykresleni,uhol_na_pismeno,uhol_na_pismeno1):
+def koleso(uhol,zvacsovanie,dlzkainputu,spomalovacia_premenna1,spomalovacia_premenna,spustene,pocet_vykresleni,uhol_na_pismeno,uhol_na_pismeno1,premenna_otacanie_hlavna_image):
 
     if spustene == True:
         _delete_()
-        platno.after(16,lambda: koleso(uhol,zvacsovanie,dlzkainputu,spomalovacia_premenna1,spomalovacia_premenna,spustene,pocet_vykresleni,uhol_na_pismeno,uhol_na_pismeno1))
+        platno.after(16,lambda: koleso(uhol,zvacsovanie,dlzkainputu,spomalovacia_premenna1,spomalovacia_premenna,spustene,pocet_vykresleni,uhol_na_pismeno,uhol_na_pismeno1,premenna_otacanie_hlavna_image))
         zvacsovanie=0
         for i in range(dlzkainputu):
             platno.create_arc(10,10,390,390,start = zvacsovanie + uhol,extent = 360/dlzkainputu)
             zvacsovanie+=360/dlzkainputu
         pocet_vykresleni+=1
 
-        final_pil_image = create_hlavna_image(uhol_na_pismeno,uhol_na_pismeno1,dlzkainputu,20,20)
-        tk_image = ImageTk.PhotoImage(final_pil_image)
-        platno.create_image(200, 200, image=tk_image)
-        platno.image = tk_image  
-        uhol_na_pismeno+=1
+        
 
         #print(pocet_vykresleni)
         
@@ -113,6 +107,13 @@ def koleso(uhol,zvacsovanie,dlzkainputu,spomalovacia_premenna1,spomalovacia_prem
         else:
             spomalovacia_premenna1-=0.02
             uhol+=spomalovacia_premenna1
+        final_pil_image = create_hlavna_image(uhol_na_pismeno,uhol_na_pismeno1,dlzkainputu,20,20)
+        rotated = final_pil_image.rotate(premenna_otacanie_hlavna_image, expand=True)
+        premenna_otacanie_hlavna_image+= 15
+
+        tk_image = ImageTk.PhotoImage(rotated)
+        platno.create_image(200, 200, image=tk_image)
+        platno.image = tk_image  
 
         
 
@@ -126,7 +127,7 @@ platno.pack()
 
 
 
-koleso(argument_uhol1,zvacsovanie_premenna,dlzkainputu_premenna,argument_spomalovacia_premenna1,spomalovacia_premenna,argument_spustene,pocet_vykresleni_premenna,argument_uhol_na_pismeno,argument_uhol_na_pismeno1)
+koleso(argument_uhol1,zvacsovanie_premenna,dlzkainputu_premenna,argument_spomalovacia_premenna1,spomalovacia_premenna,argument_spustene,pocet_vykresleni_premenna,argument_uhol_na_pismeno,argument_uhol_na_pismeno1,premenna_otacanie_hlavna_image_argument)
 
 
 
